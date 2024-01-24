@@ -1,7 +1,7 @@
 class CurrencyConverter extends React.Component {
   constructor(props) {
     super(props);
-    this.stage = {
+    this.state = {
       rate: 0.89,
       euro: 1 * 0.89,
       usd: 1,
@@ -30,7 +30,7 @@ class CurrencyConverter extends React.Component {
   handleUsdChange(event) {
     const euro = this.convert(event.target.value, this.state.rate, this.toEuro);
     this.setState({
-      usd: event.tartget.value,
+      usd: event.target.value,
       euro
     });
   }

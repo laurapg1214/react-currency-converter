@@ -14,7 +14,7 @@ var CurrencyConverter = function (_React$Component) {
 
     var _this = _possibleConstructorReturn(this, (CurrencyConverter.__proto__ || Object.getPrototypeOf(CurrencyConverter)).call(this, props));
 
-    _this.stage = {
+    _this.state = {
       rate: 0.89,
       euro: 1 * 0.89,
       usd: 1
@@ -49,7 +49,7 @@ var CurrencyConverter = function (_React$Component) {
     value: function handleUsdChange(event) {
       var euro = this.convert(event.target.value, this.state.rate, this.toEuro);
       this.setState({
-        usd: event.tartget.value,
+        usd: event.target.value,
         euro: euro
       });
     }
